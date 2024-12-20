@@ -121,7 +121,8 @@ nav.sticky{
     width: 15rem;
     top: -100px;
     transform: rotate(-45deg);
-    position: absolute;
+    position: fixed;
+    z-index:-1;
     transform-origin: 50% 0%;
     animation: spot-light 5s infinite ;
 }
