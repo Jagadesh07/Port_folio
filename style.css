@@ -12,6 +12,7 @@ body{
     background-image: url(images/background2.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:center;
     background-attachment: fixed;
     transition: 0.5s ease-in;
 }
@@ -723,7 +724,6 @@ nav{
 @media (max-width:768px){
     body{
         font-size:10px;
-        background-position: top;
     }
     .parallax{
         height: 100vh;
