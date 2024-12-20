@@ -24,7 +24,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 1rem;
+    top: 0;
     z-index: 999;
 }
 nav h1{
@@ -74,6 +74,10 @@ nav a::after{
 }
 nav a:hover::after{
     width: 100%;
+}
+nav.sticky{
+    background-color: #293038;
+    padding: 1rem 0;
 }
 /* ------home------- */
 #home{
