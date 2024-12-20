@@ -717,6 +717,7 @@ nav{
 @media (max-width:768px){
     body{
         font-size:10px;
+        background-position: top;
     }
     .parallax{
         height: 100vh;
