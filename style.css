@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #405373;
+    background-image: url(images/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 0.5s ease-in;
+}
+header{
+    width: 100%;
+    height: fit-content;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 1rem;
+    z-index: 999;
+}
+nav h1{
+    color: white;
+    margin: 0 2rem;
+    font-family: 'poppins';
+    text-transform: capitalize;
+    font-size: 1.5em;
+    position: relative;
+}
+nav h1 span{
+    color: red;
+}
+nav h1::after{
+    content: '';
+    left: 0;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    margin: 0 2rem;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-family: 'poppins';
+    line-height: 1em;
+    position: relative;
+}
+nav a::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    background-color: red;
+    transition: 0.5s ease-in;
+}
+nav a:hover::after{
+    width: 100%;
+}
+/* ------home------- */
+#home{
+    width: 100%;
+    height: fit-content;
+}
+.parallax{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+}
+.name{
+    height: 100%;
+    position: fixed;
+    margin-left: auto;
+    top: 10%;
+    z-index: -1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.name h1{
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'poppins';
+}
+.name h2{
+    font-size: 4vw;
+    color: rgb(60, 60, 60);
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'poppins';
+    text-align: center;
+}
+.spot-light{
+    width: 15rem;
+    top: -100px;
+    transform: rotate(-45deg);
+    position: absolute;
+    transform-origin: 50% 0%;
+    animation: spot-light 5s infinite ;
+}
+.arrow{
+    /* width: 100%; */
+    height: fit-content;
+    text-align: center;
+}
+.arrow img{
+    width: 10rem;
+    animation: arrow 1s linear  infinite;
+}
+.buildings{
+    width: 100%;
+    z-index: -1;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+.buildings img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+/* ------about------ */
+.container{
+    width: 100%;
+    background-color: #293038;
+}
+#about{
+    width: 100%;
+    height: fit-content;
+}
+#about h1{
+    font-size: 2em;
+    color: white;
+    width: fit-content;
+    font-family: 'poppins';
+    margin-left: 3rem;
+    position: relative;
+    text-transform: capitalize;
+}
+#about h1::after{
+    content: '';
+    left: 0;
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: red;
+    animation: dashing 1s linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+}
+.text-area{
+    color: white;
+    font-size: 1.5em;
+    font-family: 'karatina',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.text-area p{
+    margin: 2rem 0 0 3rem;
+}
+.profile{
+    display: grid;
+    grid-template-columns:0.6fr 1fr 1fr;
+    width: 100%;
+}
+.profile-name{
+    margin: 5rem auto;
+}
+.profile img{
+    width: 100%;
+    margin: auto;
+}
+.profile h2{
+    color: white;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.profile p:nth-child(2){
+    font-size: 1em;
+    color: white;
+    font-family: 'poppins';
+    margin: 1rem 0 0 1rem;
+    text-transform: capitalize;
+}
+.scroll-window{
+    width: 20rem;
+    background-color: 293038;
+    height: 15rem;
+    padding: 1rem;
+    display: block;
+    margin: auto auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+}
+.scroll-window p{
+    color: white;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: fit-content;
+    margin-top: 3rem;
+}
+.card{
+    background-color:#33363d;
+    box-shadow: 10px 10px 40px black;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.264);
+    width: fit-content;
+    margin: auto;
+    border-radius: 20px;
+}
+.card img{
+    padding-top: 1rem;
+    width: 15rem;
+}
+.card h2{
+    font-size: 2em;
+    padding: 1rem 0;
+    color: white;
+    text-align: center;
+    font-family: 'poppins';
+    text-transform: capitalize;
+}
+.card:hover{
+    box-shadow: 5px 5px 30px white;
+}
+/* --------education------ */
+#education{
+    height: fit-content;
+    width: 100%;
+}
+#education h1{
+    font-size: 2em;
+    font-family: 'poppins';
+    color: white;
+    width: fit-content;
+    margin-left: 5rem;
+    padding-top: 5rem;
+    position: relative;
+    text-transform: capitalize;
+}
+#education h1::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: red;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    animation: dashing 1s linear forwards;
+    animation-timeline: view() ;
+    animation-range-start: cover;
+}
+
+#education h3{
+    font-size: 1em;
+    color: red;
+    text-align: center;
+    width: fit-content;
+    margin: 2rem 5rem;
+    font-family: 'poppins';
+}
+#education p{
+    color: white;
+    margin: 0 5rem;
+    font-size: 2em;
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#education p span{
+    position: relative;
+}
+#education p span::after{
+    content: '';
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    position: absolute;
+}
+
+/* --------skills-------- */
+#skills{
+    width: 100%;
+    margin: 3rem 0;
+    height: fit-content;
+}
+#skills h1{
+    font-size: 2em;
+    margin: 0 0 3rem 5rem;
+    color: white;
+    width: fit-content;
+    position: relative;
+    font-family: 'poppins';
+}
+#skills h1::after{
+    content: '';
+    background-color: rgb(253, 0, 0);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    position: absolute;
+    animation: dashing 1s linear forwards;
+    animation-timeline: view() ;
+    animation-range-start: cover;
+}
+.skill-container{
+    height: 25rem;
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3,1fr);
+}
+.box1{
+    width: 20rem;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(images/galaxy.jpg);
+}
+.box1 img{
+    width: 100%;
+    aspect-ratio: 6/5;
+    animation: robot 3s linear infinite alternate;
+}
+
+.box1 h2{
+    font-family: 'poppins';
+    text-align: center;
+    position: relative;
+    bottom: -100px;
+    color: white;
+    animation: word-animation 3s linear infinite alternate;   
+}
+
+.box2{
+    width: 20rem;
+    background: url(images/background.jpg);
+    border-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.box2 img:first-child{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.box2 img:nth-child(2){
+    width: 2rem;
+    right: -80px;
+    position: absolute;
+    animation: comet 3s linear 1s infinite;
+}
+.box2 img:nth-child(3){
+    width: 2rem;
+    right: -80px;
+    top:50px;
+    border-radius: 50%;
+    border: 50px white;
+    position: absolute;
+    animation: comet2 3s linear 3s infinite;
+}
+.box-inside1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateY(100%);
+    text-align: center;
+    background-color:  rgba(255, 0, 0, 0.447);
+    transition: 0.5s ease-in-out;
+}
+.box-inside1 h3{
+    color: white;
+    font-family: 'poppins';
+    font-size: 2em;
+    padding: 2rem 0;
+}
+.box-inside1 p{
+    color: wheat;
+}
+.box1:hover > .box-inside1{
+    transform: translateY(0);
+}
+.box-inside2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.447);
+    transition: 0.5s ease-in-out;
+}
+.box-inside2 h3{
+    color: white;
+    font-size: 2em;
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+    font-family: 'poppins';
+}
+.box-inside2 p{
+    color: wheat;
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.box2:hover > .box-inside2{
+    transform: translateY(0%);
+}
+
+.box-inside3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateY(100%);
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.447);
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.box-inside3 h3{
+    color: white;
+    font-family: 'poppins';
+    font-size: 2em;
+    margin: 2rem 0;
+}
+.box-inside3 p{
+    color: wheat;
+}
+.box3:hover > .box-inside3{
+    transform: translateY(0);
+}
+.box3{
+    background: url(images/mountain.jpg);
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 20rem;
+}
+.moon-box{
+    width: 100%;
+    text-align: center;
+}
+.moon-box img{
+    width: 10rem;
+}
+.box3 img:nth-child(2){
+    width: 10rem;
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+    left: -150px;
+    animation: cloud 10s linear 3s infinite;
+}
+
+/* -----contact------ */
+#contact{
+    width: 100%;
+    height: fit-content;
+    background-color: #293038;
+}
+#contact h1{
+    color: white;
+    font-size: 2em;
+    width: fit-content;
+    font-family: 'poppins';
+    margin: 0 auto;
+    position: relative;
+}
+#contact h1::after{
+    content:'';
+    background-color: red;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+}
+.contact-details{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+}
+.contact-details div{
+    margin: 3rem 1rem;
+    display: flex;
+    justify-content:start;
+    align-items: start;
+}
+.contact-details img{
+    width: 2rem;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+}
+.contact-details h3 a{
+    color: wheat;
+    position: relative;
+    margin-left: 1rem;
+    display: inline-block;
+}
+/* -------foooter----- */
+.foot{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 5rem;
+}
+.foot p{
+    text-align: center;
+    color: #293038;
+    padding-top:1.5rem;
+    font-family: 'poppins';
+}
+.foot i{
+    color: #293038;
+}
+footer{
+    padding-bottom: 2rem;
+}
+/* ------animation-------- */
+@keyframes dashing{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes arrow {
+    0%{
+        margin-top: 1rem ;
+    }
+    50%{
+        margin-top: 0rem ;
+    }
+    100%{
+        margin-top: 1rem ;
+    }
+}
+@keyframes spot-light {
+    0%{
+
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+
+        transform: rotate(-45deg);
+    }
+}
+@keyframes robot {
+    0%{
+        transform: translatey(0);
+    }
+    50%{
+        transform: translatey(-70px);
+        rotate: 20deg;
+    }
+    100%{
+        transform: translatey(-100px);
+        rotate: -20deg;
+    }
+}
+@keyframes word-animation {
+    0%{
+        bottom: -100px;
+    }
+    50%{
+        bottom: -5px;
+    }
+    100%{
+        bottom: 100px;
+    }
+}
+@keyframes comet {
+    0%{
+        right: -10px;
+        top: -10px;
+    }
+    20%{
+        right: 80px;
+        top: 80px;
+    }
+    40%{
+        right: 160px;
+       top: 160px;
+    }
+    60%{
+        right: 240px;
+        top:240px;
+    }
+    80%{
+        right:320px;
+        top: 320px;
+    }
+    100%{
+        right:400px;
+        top:400px;
+    }
+}
+@keyframes comet2 {
+    0%{
+        right: -10px;
+        top: 0px;
+    }
+    20%{
+        right: 90px;
+        top: 130px;
+    }
+    40%{
+        right: 170px;
+       top: 210px;
+    }
+    60%{
+        right: 250px;
+        top:290px;
+    }
+    80%{
+        right:330px;
+        top: 370px;
+    }
+    100%{
+        right:410px;
+        top:450px;
+    }
+}
+@keyframes cloud {
+    0%{
+        left: -150px;
+    }
+    100%{
+        left: 250px;
+    }
+}
+/* -------scrollbar-------- */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+}
+
+/* --------media query------- */
+@media (max-width:1024px){
+    body{
+        font-size:10px;
+    }
+    .parallax{
+        height: 97vh;
+    }
+nav{
+    padding-left: 1rem;
+}
+.spot-light{
+    width: 10rem;
+}
+.name{
+    top: 20%;
+}
+.scroll-window{
+    height: 10rem;
+}
+.skill-container{
+    height: 20rem;
+}
+.box1{
+    width: 15rem;
+}
+.box2{
+    width: 15rem;
+}
+.box3{
+    width: 15rem;
+}
+}
+
+@media (max-width:768px){
+    body{
+        font-size:10px;
+    }
+    .parallax{
+        height: 100vh;
+    }
+nav{
+    padding-left: 1rem;
+    z-index: -1;
+}
+.cards{
+    grid-template-columns: repeat(1,1fr);
+}
+.spot-light{
+    width: 10rem;
+}
+#education p{
+    font-size: 1.5em;
+}
+.name{
+    top: 20%;
+}
+.scroll-window{
+    height: 10rem;
+}
+.profile{
+    grid-template-columns: repeat(1,1fr);
+}
+.skill-container{
+    height: 15rem;
+    grid-template-columns: repeat(1,1fr);
+}
+.box1{
+    width: 12rem;
+}
+.box2{
+    width: 12rem;
+}
+.box3{
+    width: 12rem;
+}
+}
+@media (max-width:752px) {
+    .spot-light{
+        width: 3rem;
+        top: -28px;
+    }
+    .contact-details
+    .contact-details{
+        font-size: 1em;
+    }
+}
+@media (max-width:770px){
+    body{
+        font-size:10px;
+    }
+    .parallax{
+        height: 100vh;
+    }
+    nav h1{
+        margin: auto;
+        font-size: 3em;
+    }
+.hideonmobile{
+    display: none;
+}
+.spot-light{
+    width: 3rem;
+    top: -3rem;
+}
+.name{
+    top: 20%;
+}
+.scroll-window{
+display: none;
+}
+.skill-container{
+    height: 15rem;
+}
+.box1{
+    height: 20rem;
+    margin: 2rem auto;
+}
+.box2{
+    height: 20rem;
+    margin: 2rem auto;
+}
+.box3{
+    height: 20rem;
+    margin: 2rem auto;
+}
+.cards{
+   gap: 1.5rem;
+}
+#about{
+    text-align: center;
+}
+#about p{
+    margin: 1.5rem;
+}
+#about h1{
+    margin: auto;
+}
+.profile-info{
+    margin-bottom: 2rem;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+#education{
+    text-align: center;
+}
+#education h1,#education h3{
+    margin: 1rem auto;
+}
+#skills h1{
+    margin: 2rem auto;
+}
+.skill-container{
+    height: fit-content;
+}
+}
+@media (max-width:321px) {
+    body{
+        font-size: 10px;
+    }
+    .name h1{
+        font-size: 3em;
+    }
+    .name h2{
+        font-size: 2em;
+    }
+    .parallax{
+        height: 100vh;
+    }
+    .buildings img{
+        height: 50%;
+        width: 100%;
+    }
+}
