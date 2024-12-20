@@ -26,7 +26,7 @@ nav{
     position: sticky;
     top: 0;
     z-index: 999;
-    transition:0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 nav h1{
     color: white;
