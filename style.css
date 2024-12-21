@@ -12,7 +12,6 @@ body{
     background-image: url(images/background2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:center;
     background-attachment: fixed;
     transition: 0.5s ease-in;
 }
@@ -79,7 +78,7 @@ nav a:hover::after{
 }
 nav.sticky{
     background-color: #293038;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
 }
 /* ------home------- */
 #home{
@@ -122,7 +121,7 @@ nav.sticky{
     width: 15rem;
     top: -100px;
     transform: rotate(-45deg);
-     position: fixed;
+    position: fixed;
     z-index: -1;
     transform-origin: 50% 0%;
     animation: spot-light 5s infinite ;
@@ -199,7 +198,7 @@ nav.sticky{
 }
 .profile h2{
     color: white;
-    font-size: 1.8em;
+    font-size: 2em;
     text-transform: capitalize;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -257,15 +256,15 @@ nav.sticky{
 #education{
     height: fit-content;
     width: 100%;
+    padding-top: 2rem;
 }
 #education h1{
     font-size: 2em;
     font-family: 'poppins';
     color: white;
     width: fit-content;
-    margin-left: 5rem;
-    padding-top: 5rem;
     position: relative;
+    margin: 0 3rem;
     text-transform: capitalize;
 }
 #education h1::after{
@@ -311,12 +310,12 @@ nav.sticky{
 /* --------skills-------- */
 #skills{
     width: 100%;
-    margin: 3rem 0;
+    margin-top: 2rem;
     height: fit-content;
 }
 #skills h1{
     font-size: 2em;
-    margin: 0 0 3rem 5rem;
+    margin: 0 auto;
     color: white;
     width: fit-content;
     position: relative;
@@ -338,7 +337,7 @@ nav.sticky{
     height: 25rem;
     width: 100%;
     display: grid;
-    margin: auto;
+    margin: 2rem  auto;
     grid-template-columns: repeat(3,1fr);
 }
 .box1{
@@ -521,12 +520,13 @@ nav.sticky{
     grid-template-columns: repeat(auto-fit,1fr);
 }
 .contact-details div{
-    margin: 3rem 1rem;
+    margin:2rem 0 1rem 1rem;
     display: flex;
     justify-content:start;
     align-items: start;
 }
 .contact-details img{
+  
     width: 2rem;
     display: inline-block;
     background-color: white;
@@ -721,9 +721,10 @@ nav{
 }
 }
 
-@media (max-width:768px){
+@media (max-width:769px){
     body{
-        font-size:10px;
+        font-size:15px;
+        background-position: top;
     }
     .parallax{
         height: 100vh;
@@ -734,12 +735,16 @@ nav{
 }
 .cards{
     grid-template-columns: repeat(1,1fr);
+    gap: 1.5rem;
 }
 .spot-light{
     width: 10rem;
 }
 #education p{
     font-size: 1.5em;
+}
+.hideonmobile{
+    display: none;
 }
 .name{
     top: 20%;
@@ -750,99 +755,83 @@ nav{
 .profile{
     grid-template-columns: repeat(1,1fr);
 }
+.profile img{
+    width: 30rem;
+}
+#skills h1{
+    margin: 0 auto;
+}
 .skill-container{
     height: 15rem;
+    margin-top: 1rem;
     grid-template-columns: repeat(1,1fr);
 }
+.profile-name{
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.profile-name h2{
+    margin: 0;
+}
+.parallax{
+    height: 100vh;
+}
+nav h1{
+    margin: auto;
+    font-size: 3em;
+}
+.scroll-window{
+display: none;
+}
 .box1{
-    width: 12rem;
+height: 20rem;
+margin: 1rem auto;
 }
 .box2{
-    width: 12rem;
+height: 20rem;
+margin: 1rem auto;
 }
 .box3{
-    width: 12rem;
+height: 20rem;
+margin: 1rem auto;
+}
+
+#about{
+text-align: center;
+}
+#about p{
+margin: 1.5rem;
+}
+#about h1{
+margin: auto;
+}
+.profile-info{
+margin-bottom: 2rem;
+font-size: 1.5em;
+align-items: center;
+justify-content: center;
+}
+#education h1,#education h3{
+margin: 1rem auto;
+}
+.skill-container{
+height: fit-content;
 }
 }
+
 @media (max-width:752px) {
     .spot-light{
         width: 3rem;
         top: -28px;
     }
-    .contact-details
     .contact-details{
         font-size: 1em;
     }
 }
-@media (max-width:770px){
-    body{
-        font-size:10px;
+@media (max-width:490px) {
+    .profile img{
+        width: 20rem;
     }
-    .parallax{
-        height: 100vh;
-    }
-    nav h1{
-        margin: auto;
-        font-size: 3em;
-    }
-.hideonmobile{
-    display: none;
-}
-.spot-light{
-    width: 3rem;
-    top: -3rem;
-}
-.name{
-    top: 20%;
-}
-.scroll-window{
-display: none;
-}
-.skill-container{
-    height: 15rem;
-}
-.box1{
-    height: 20rem;
-    margin: 2rem auto;
-}
-.box2{
-    height: 20rem;
-    margin: 2rem auto;
-}
-.box3{
-    height: 20rem;
-    margin: 2rem auto;
-}
-.cards{
-   gap: 1.5rem;
-}
-#about{
-    text-align: center;
-}
-#about p{
-    margin: 1.5rem;
-}
-#about h1{
-    margin: auto;
-}
-.profile-info{
-    margin-bottom: 2rem;
-    font-size: 1.5em;
-    align-items: center;
-    justify-content: center;
-}
-#education{
-    text-align: center;
-}
-#education h1,#education h3{
-    margin: 1rem auto;
-}
-#skills h1{
-    margin: 2rem auto;
-}
-.skill-container{
-    height: fit-content;
-}
 }
 @media (max-width:321px) {
     body{
