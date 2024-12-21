@@ -148,7 +148,7 @@ nav.sticky{
     position: absolute;
     bottom: 0;
 }
-.buildings img:nth-child(1){
+.buildings img:first-child{
     display: none;
 }
 /* ------about------ */
