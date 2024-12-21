@@ -809,10 +809,8 @@ height: 20rem;
 margin: 1rem auto;
 }
 
-#about{
-text-align: center;
-}
 #about p{
+font-size: 0.5em;
 margin: 1.5rem;
 }
 #about h1{
