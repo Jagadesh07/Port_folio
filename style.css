@@ -490,7 +490,7 @@ nav.sticky{
 .box3 img:nth-child(2){
     width: 10rem;
     position: absolute;
-    z-index: 999;
+    z-index: 10;
     top: 50px;
     left: -150px;
     animation: cloud 10s linear 3s infinite;
