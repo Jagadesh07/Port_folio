@@ -768,6 +768,12 @@ nav{
 .profile{
     grid-template-columns: repeat(1,1fr);
 }
+.proffile-name h2{
+    font-size: 1.5em;
+}
+.profile-name p{
+    text-align: center;
+}
 .profile img{
     width: 30rem;
 }
